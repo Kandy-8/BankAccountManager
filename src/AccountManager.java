@@ -6,9 +6,9 @@ public class AccountManager {
     public void createAccount(String accNo, String name, double initialBalance) {
         if (!accounts.containsKey(accNo)) {
             accounts.put(accNo, new BankAccount(accNo, name, initialBalance));
-            System.out.println("✅ Account created successfully.");
+            System.out.println(" Account created successfully.");
         } else {
-            System.out.println("⚠️ Account number already exists.");
+            System.out.println(" Account number already exists.");
         }
     }
 
@@ -17,7 +17,7 @@ public class AccountManager {
         if (acc != null) {
             System.out.println(acc);
         } else {
-            System.out.println("❌ Account not found.");
+            System.out.println(" Account not found.");
         }
     }
 
@@ -25,9 +25,9 @@ public class AccountManager {
         BankAccount acc = accounts.get(accNo);
         if (acc != null) {
             acc.deposit(amount);
-            System.out.println("💸 Deposit successful. New Balance: ₹" + acc.getBalance());
+            System.out.println(" Deposit successful. New Balance: ₹" + acc.getBalance());
         } else {
-            System.out.println("❌ Account not found.");
+            System.out.println(" Account not found.");
         }
     }
 
@@ -35,20 +35,20 @@ public class AccountManager {
         BankAccount acc = accounts.get(accNo);
         if (acc != null) {
             if (acc.withdraw(amount)) {
-                System.out.println("💰 Withdrawal successful. New Balance: ₹" + acc.getBalance());
+                System.out.println(" Withdrawal successful. New Balance: ₹" + acc.getBalance());
             } else {
-                System.out.println("⚠️ Insufficient balance.");
+                System.out.println(" Insufficient balance.");
             }
         } else {
-            System.out.println("❌ Account not found.");
+            System.out.println("Account not found.");
         }
     }
 
     public void deleteAccount(String accNo) {
         if (accounts.remove(accNo) != null) {
-            System.out.println("🗑️ Account deleted.");
+            System.out.println(" Account deleted.");
         } else {
-            System.out.println("❌ Account not found.");
+            System.out.println(" Account not found.");
         }
     }
 }

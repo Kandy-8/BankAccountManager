@@ -51,10 +51,10 @@ public class Main {
                     manager.deleteAccount(sc.nextLine());
                     break;
                 case 0:
-                    System.out.println("👋 Exiting. Thank you!");
+                    System.out.println(" Exiting. Thank you!");
                     break;
                 default:
-                    System.out.println("❓ Invalid choice.");
+                    System.out.println(" Invalid choice.");
             }
         } while (choice != 0);
 
